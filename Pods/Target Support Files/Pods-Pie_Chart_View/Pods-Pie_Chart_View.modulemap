@@ -1,0 +1,6 @@
+framework module Pods_Pie_Chart_View {
+  umbrella header "Pods-Pie_Chart_View-umbrella.h"
+
+  export *
+  module * { export * }
+}

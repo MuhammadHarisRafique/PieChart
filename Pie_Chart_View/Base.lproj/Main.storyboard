@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,57 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pie_Chart_View" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGe-Ek-w5V" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="44" width="375" height="314"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="32X-3w-Jea"/>
+                                    <constraint firstAttribute="height" constant="314" id="xW4-ot-j3b"/>
+                                </constraints>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FiK-5O-aPN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7SW-MX-XsM"/>
+                                    <constraint firstAttribute="width" constant="375" id="uLH-ty-tmC"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Chart Bar" id="R9c-3d-V0w"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OeR-MA-oL7" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="366" width="375" height="301"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OeR-MA-oL7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="46d-pY-ris"/>
+                            <constraint firstItem="FiK-5O-aPN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8Uf-kj-AsY"/>
+                            <constraint firstItem="FiK-5O-aPN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BL2-si-yJC"/>
+                            <constraint firstItem="OeR-MA-oL7" firstAttribute="top" secondItem="AGe-Ek-w5V" secondAttribute="bottom" constant="8" symbolic="YES" id="Dsi-cO-iCI"/>
+                            <constraint firstItem="OeR-MA-oL7" firstAttribute="leading" secondItem="AGe-Ek-w5V" secondAttribute="leading" id="JlO-iY-KEJ"/>
+                            <constraint firstItem="AGe-Ek-w5V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LGw-Us-Iaa"/>
+                            <constraint firstItem="AGe-Ek-w5V" firstAttribute="top" secondItem="FiK-5O-aPN" secondAttribute="bottom" id="RCL-Ij-K2L"/>
+                            <constraint firstItem="OeR-MA-oL7" firstAttribute="trailing" secondItem="AGe-Ek-w5V" secondAttribute="trailing" id="m5I-Ys-MVA"/>
+                            <constraint firstItem="FiK-5O-aPN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="y3X-eg-uHE"/>
+                            <constraint firstItem="AGe-Ek-w5V" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="z5W-pV-7yp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="barChartView" destination="OeR-MA-oL7" id="bat-rl-vjd"/>
+                        <outlet property="pieChartView" destination="AGe-Ek-w5V" id="Ral-7l-Ugl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>

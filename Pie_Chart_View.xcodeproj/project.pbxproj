@@ -12,9 +12,12 @@
 		4DF80B591FAA884100A4FA05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DF80B571FAA884100A4FA05 /* Main.storyboard */; };
 		4DF80B5B1FAA884100A4FA05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF80B5A1FAA884100A4FA05 /* Assets.xcassets */; };
 		4DF80B5E1FAA884100A4FA05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DF80B5C1FAA884100A4FA05 /* LaunchScreen.storyboard */; };
+		59DAA6369B6D0E809C00374E /* Pods_Pie_Chart_View.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 179B4EFF77D79C93C1FA1F26 /* Pods_Pie_Chart_View.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		179B4EFF77D79C93C1FA1F26 /* Pods_Pie_Chart_View.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pie_Chart_View.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FE2331A49A54F600D47CFC0 /* Pods-Pie_Chart_View.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pie_Chart_View.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pie_Chart_View/Pods-Pie_Chart_View.debug.xcconfig"; sourceTree = "<group>"; };
 		4DF80B501FAA884100A4FA05 /* Pie_Chart_View.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pie_Chart_View.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF80B531FAA884100A4FA05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DF80B551FAA884100A4FA05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		4DF80B5A1FAA884100A4FA05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DF80B5D1FAA884100A4FA05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DF80B5F1FAA884100A4FA05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F91FED68EA3CF3228BD6BF5 /* Pods-Pie_Chart_View.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pie_Chart_View.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pie_Chart_View/Pods-Pie_Chart_View.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59DAA6369B6D0E809C00374E /* Pods_Pie_Chart_View.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				4DF80B521FAA884100A4FA05 /* Pie_Chart_View */,
 				4DF80B511FAA884100A4FA05 /* Products */,
+				836709F40EA667CCB06BC677 /* Pods */,
+				723AC9DD702518CEEE75F59A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = Pie_Chart_View;
 			sourceTree = "<group>";
 		};
+		723AC9DD702518CEEE75F59A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				179B4EFF77D79C93C1FA1F26 /* Pods_Pie_Chart_View.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		836709F40EA667CCB06BC677 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FE2331A49A54F600D47CFC0 /* Pods-Pie_Chart_View.debug.xcconfig */,
+				8F91FED68EA3CF3228BD6BF5 /* Pods-Pie_Chart_View.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DF80B621FAA884100A4FA05 /* Build configuration list for PBXNativeTarget "Pie_Chart_View" */;
 			buildPhases = (
+				EB2F1592A0E2E1DEBB8208E9 /* [CP] Check Pods Manifest.lock */,
 				4DF80B4C1FAA884100A4FA05 /* Sources */,
 				4DF80B4D1FAA884100A4FA05 /* Frameworks */,
 				4DF80B4E1FAA884100A4FA05 /* Resources */,
+				54D76E7E440B11172D10E15C /* [CP] Embed Pods Frameworks */,
+				6B0C5CA880844D85F164E8A7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54D76E7E440B11172D10E15C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pie_Chart_View/Pods-Pie_Chart_View-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B0C5CA880844D85F164E8A7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pie_Chart_View/Pods-Pie_Chart_View-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB2F1592A0E2E1DEBB8208E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4DF80B4C1FAA884100A4FA05 /* Sources */ = {
@@ -272,11 +347,13 @@
 		};
 		4DF80B631FAA884100A4FA05 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FE2331A49A54F600D47CFC0 /* Pods-Pie_Chart_View.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8GWSL85966;
 				INFOPLIST_FILE = Pie_Chart_View/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.HigherVisibility.Pie-Chart-View";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,11 +364,13 @@
 		};
 		4DF80B641FAA884100A4FA05 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F91FED68EA3CF3228BD6BF5 /* Pods-Pie_Chart_View.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8GWSL85966;
 				INFOPLIST_FILE = Pie_Chart_View/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.HigherVisibility.Pie-Chart-View";
 				PRODUCT_NAME = "$(TARGET_NAME)";
